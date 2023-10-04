@@ -129,6 +129,10 @@ input{
 
 /* Mobile-friendly code */
 @media (max-width: 768px) {
+  .banner{
+    width: 100%;
+  }
+
   .centered {
     top: 10%;
     transform: translate(-50%, 40%);
