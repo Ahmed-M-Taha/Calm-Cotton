@@ -1,28 +1,33 @@
-.beige-txt{
+/* Updated CSS Code */
+
+.beige-txt {
   color: var(--beige);
 }
-.beige-txt:hover{
+
+.beige-txt:hover {
   color: #caab95;
 }
 
-input{
+input {
   height: 2.5em;
   width: 18em;
   text-align: center;
   font-size: larger;
 }
-.form{
-    margin: auto;
-    text-align: center;
-    border:inline;
-    border-radius: 2em;
-    background-color: white;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 75%;
-    color: #000;
+
+.form {
+  margin: auto;
+  text-align: center;
+  border: inline;
+  border-radius: 2em;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 75%;
+  color: #000;
 }
-.form-p{
+
+.form-p {
   font-size: larger;
 }
 
@@ -62,7 +67,9 @@ input{
 }
 
 .hero {
-  background-image: url(/src/Banner.jpg);
+  background-image: url(/Site/src/Banner.jpg);
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Center the background image */
   color: #fff;
   margin: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -129,9 +136,6 @@ input{
 
 /* Mobile-friendly code */
 @media (max-width: 768px) {
-  .banner{
-    width: 100%;
-  }
 
   .centered {
     top: 10%;
@@ -185,6 +189,5 @@ input{
 
   .card-body {
     text-align: center;
-    
   }
 }
