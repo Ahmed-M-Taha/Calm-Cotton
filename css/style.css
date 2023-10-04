@@ -1,0 +1,186 @@
+.beige-txt{
+  color: var(--beige);
+}
+.beige-txt:hover{
+  color: #caab95;
+}
+
+input{
+  height: 2.5em;
+  width: 18em;
+  text-align: center;
+  font-size: larger;
+}
+.form{
+    margin: auto;
+    text-align: center;
+    border:inline;
+    border-radius: 2em;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 75%;
+    color: #000;
+}
+.form-p{
+  font-size: larger;
+}
+
+.jumbotron {
+  text-align: center;
+  font-size: xxx-large;
+  font-weight: lighter;
+}
+
+.nav-link {
+  font-size: x-large;
+  word-break: none;
+  text-align: center;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.active {
+  font-weight: bolder;
+}
+
+.clothes-btn {
+  text-align: center;
+  font-size: xx-large;
+  width: 25%;
+  height: 13em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.clothes-btn:hover {
+  background-color: var(--beige);
+  color: white;
+}
+
+.hero {
+  background-image: url(/src/Banner.jpg);
+  color: #fff;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  height: 400px;
+}
+
+.centered {
+  font-size: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  color: #fff;
+  text-align: center;
+}
+
+.bg-beige {
+  background-color: var(--beige);
+  color: white;
+  font-size: large;
+}
+
+.beige-btn {
+  background-color: var(--beige);
+  color: white;
+  font-size: large;
+}
+
+.beige-btn:hover {
+  background-color: #caab95;
+  color: white;
+  font-size: large;
+}
+
+.centered1 {
+  font-size: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  color: #fff;
+  text-align: center;
+  word-break: none;
+  white-space: nowrap;
+}
+
+.centered-btn {
+  font-size: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 105%);
+  color: #fff;
+  text-align: center;
+  word-break: none;
+  white-space: nowrap;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile-friendly code */
+@media (max-width: 768px) {
+  .centered {
+    top: 10%;
+    transform: translate(-50%, 40%);
+  }
+
+  .centered1 {
+    font-size: xx-large;
+    top: 15%;
+    transform: translate(-50%, 95%);
+  }
+  .centered-btn {
+    font-size: xx-large;
+    top: 15%;
+    transform: translate(-50%, 45%);
+  }
+}
+
+:root {
+  --beige: #e0c2ac;
+}
+
+.clothes-btn-container {
+  text-align: center;
+}
+
+.clothes-btn {
+  text-align: center;
+  font-size: xx-large;
+  width: 25%;
+  height: 13em;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+.clothes-btn:hover {
+  background-color: var(--beige);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .clothes-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  .card-body {
+    text-align: center;
+    
+  }
+}
