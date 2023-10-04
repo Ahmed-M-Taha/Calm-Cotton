@@ -66,6 +66,19 @@ input {
   color: white;
 }
 
+.centered2{
+  font-weight: bolder;
+  font-size: 45px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  color: #fff;
+  text-align: center;
+  word-break: none;
+  white-space: nowrap;
+}
+
 .hero {
   background-image: url(/Site/src/Banner.jpg);
   background-size: cover; /* Adjust as needed */
@@ -138,18 +151,28 @@ input {
 @media (max-width: 768px) {
 
   .centered {
-    top: 10%;
+    top: 7%;
     transform: translate(-50%, 40%);
   }
 
   .centered1 {
     font-size: xx-large;
-    top: 15%;
+    top: 10%;
     transform: translate(-50%, 95%);
   }
+
+  .centered2 {
+    font-size: x-large;
+    color: aliceblue;
+    top: 38%;
+    
+    text-align: center;
+    transform: translate(-50%, 95%);
+  }
+
   .centered-btn {
     font-size: xx-large;
-    top: 15%;
+    top: 11%;
     transform: translate(-50%, 45%);
   }
 }
