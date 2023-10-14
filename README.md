@@ -1,5 +1,5 @@
 <p align="center">
-  <h1><strong>CalmCotton</strong></h1>
+  <h1 style="color: #e0c2ac; font-size: 24px;"><strong>CalmCotton</strong></h1>
 </p>
 
 <hr>
