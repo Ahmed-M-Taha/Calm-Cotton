@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adminpanel</title>
+    <link rel="shortcut icon" href="./src/Logo-rd.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/Icon.png" type="image/x-icon">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-dark">
+    <!-- Left navbar links -->
+    <ul style="color: #0a0118;" class="navbar-nav">
+      <li class="nav-item">
+        <a style="color: #ffffff;" class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a style="color: #ffffff;" href="index.html" class="nav-link">Return to Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-slide="true" id="logout" href="index.html" role="button">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="src/Logo-rd.png" alt="Admin Panel" class="brand-image img-circle elevation-3" style="opacity: .8;">
+      <span class="brand-text font-weight-light">Admin Panel</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional)
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="images/rand/profile.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">User</a>
+        </div>
+      </div> -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <!-- menu-open -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Home
+              </p>
+            </a>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <div class="col-sm-6">
+              <h1 style="margin-top: 0.7em;"><b>Welcome Admin!</b></h1>
+            </div>
+            <hr>
+            <br>
+            <h1 style="margin-top: 0.7em; margin-left: 1em;">Manage Hoodies</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content" style="margin-left: 1.75em;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-plus"></i> Add A Hoodie</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <h4 style="margin-bottom: .75em;">Add a Hoodie</h4>
+                <input type="text" id="Hoodiename" class="form-control" placeholder="Hoodie Name">
+                <br>
+                <input type="text" id="Hoodiedesc" class="form-control" placeholder="Hoodie Description">
+                <br>
+                <input type="file" accept="image/*" id="Hoodieimg" class="form-control-file border" placeholder="Hoodie Image">
+                <br>
+                <br>
+                <div>
+                  <button class="btn btn-success" id="addHoodie"><i style="margin-right: .5em;" class="fa fa-solid fa-plus"></i> Add Hoodie </button>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i>  Delete Hoodie </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <h4 style="margin-bottom: .75em;">Alter a Hoodie</h4>
+                <input type="text" id="newHoodieid" class="form-control" placeholder="Hoodie ID">
+                <input type="text" id="newHoodiename" class="form-control" placeholder="New Hoodie Name">
+                <br>
+                <input type="text" id="newHoodiedesc" class="form-control" placeholder="New Hoodie Description">
+                <br>
+                <input type="file" accept="image/*" id="newHoodieimg" class="form-control-file border" placeholder="New Hoodie Image">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                  <button class="btn btn-primary" id="updateHoodie"><i style="margin-right: .5em;" class="fa fa-solid fa-pen"></i> Update Hoodie </button>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i>  Delete Hoodie </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <h4 style="margin-bottom: .75em;">Delete a Hoodie</h4>
+                <input type="text" id="Hoodieid" class="form-control" placeholder="Hoodie ID">
+                <br>
+                <br>
+                <div>
+                  <button class="btn btn-danger" id="deleteHoodie"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i> Delete Hoodie </button>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+
+            <hr>
+            <h1 style="margin-top: 0.7em; margin-left: 1em; font-size: x-large;">Manage Sweatpants</h1>
+        </div>
+
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- Main content -->
+  <section class="content" style="margin-left: 1.75em;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-plus"></i> Add A Sweatpant</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <h4 style="margin-bottom: .75em;">Add a Sweatpant</h4>
+              <input type="text" id="Sweatpantname" class="form-control" placeholder="Sweatpant Name">
+              <br>
+              <input type="text" id="Sweatpantdesc" class="form-control" placeholder="Sweatpant Description">
+              <br>
+              <input type="file" accept="image/*" id="Sweatpantimg" class="form-control-file border" placeholder="Sweatpant Image">
+              <br>
+              <br>
+              <div>
+                <button class="btn btn-success" id="addSweatpant"><i style="margin-right: .5em;" class="fa fa-solid fa-plus"></i> Add Sweatpant </button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i>  Alter Sweatpant </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <h4 style="margin-bottom: .75em;">Alter a Sweatpant</h4>
+              <input type="text" id="newSweatpantid" class="form-control" placeholder="Sweatpant ID">
+              <input type="text" id="newSweatpantname" class="form-control" placeholder="New Sweatpant Name">
+              <br>
+              <input type="text" id="newSweatpantdesc" class="form-control" placeholder="New Sweatpant Description">
+              <br>
+              <input type="file" accept="image/*" id="newSweatpantimg" class="form-control-file border" placeholder="New Sweatpant Image">
+              <br>
+              <br>
+              <br>
+              <br>
+              <div>
+                <button class="btn btn-primary" id="updateSweatpant"><i style="margin-right: .5em;" class="fa fa-solid fa-pen"></i> Update Sweatpant </button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i>  Delete Sweatpant </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <h4 style="margin-bottom: .75em;">Delete a Sweatpant</h4>
+              <input type="text" id="Sweatpantid" class="form-control" placeholder="Sweatpant ID">
+              <br>
+              <br>
+              <div>
+                <button class="btn btn-danger" id="deleteSweatpant"><i style="margin-right: .5em;" class="fa fa-solid fa-minus"></i> Delete Sweatpant </button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+
+
+          <hr>
+          
+          
+            
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+</body>
+</html>
