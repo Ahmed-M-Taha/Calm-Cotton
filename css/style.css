@@ -1,4 +1,8 @@
 /* Updated CSS Code */
+hr{
+  margin-left: 2em;
+  margin-right: 2em;
+}
 
 .beige-txt {
   color: var(--beige);
@@ -142,6 +146,10 @@ input {
   white-space: nowrap;
 }
 
+.product-name{
+  font-size: xxx-large;
+}
+
 .hero img {
   width: 100%;
   height: auto;
@@ -149,6 +157,9 @@ input {
 
 /* Mobile-friendly code */
 @media (max-width: 768px) {
+  .product-name{
+    font-size: x-large;
+  }
 
   .centered {
     top: 7%;
